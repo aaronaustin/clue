@@ -5,20 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Clue</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <style media="screen">
       body {
-        font-family: sans-serif;
+        font-family: 'Montserrat', sans-serif;;
         font-size: 30px;
         line-height: 30px;
+      }
+      h4 {
+        margin-bottom: 4px;
+        color: #999;
       }
       .row {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
       }
       .title {
         flex-grow:2;
+      }
+      .player {
+        height:30px;
+        width:30px;
+        border: 1px solid #eee;
+        border-radius: 50%;
+        text-align: center;
+        color: #aaa;
+        cursor:pointer;
       }
       ul {
         padding-left: 0;
@@ -31,7 +48,7 @@
         cursor: pointer;
         -webkit-appearance: none;
         appearance: none;
-        background: #34495E;
+        background: #999;
         border-radius: 1px;
         box-sizing: border-box;
         position: relative;
@@ -53,12 +70,43 @@
       }
       input[type='checkbox']:checked + label {
         text-decoration: line-through;
+        color: #999;
       }
       
       select {
         float:right;
       }
     </style>
+
+    <script type="text/javascript">
+      var counter = [];
+
+      for(i = 0; i < 21; i++){
+        counter[i] = 0;
+      }
+      
+
+      function countFunction(count) {
+        if(count > 5){
+          console.log('countFunc if: ', 0)
+          return 0;
+        }
+        else {
+          console.log('countFunc else: ', count + 1)
+          return count + 1;
+        }
+      }
+      function countMe(countValue, counterIndex) {
+        var newCount = countFunction(countValue);
+        counter[counterIndex] = newCount;
+        var button = document.getElementById('button' + counterIndex);
+        button.innerHTML = newCount;
+        console.log('countValue: ', countValue);
+        console.log('counterIndex: ', counterIndex);
+
+      }
+
+    </script>
   </head>
   <body>
     <h4>WHO</h4>
@@ -67,30 +115,174 @@
         <input type="checkbox"><label>Mustard</label>
       </div>
       <div class="player">
-        <input type="number" name="quantity" min="0" max="5">
+        <div id="button0" onClick="countMe(counter[0], 0)">0</div>
       </div>
-
     </div>
-    <ul>
-      <li><input type="checkbox"><label>Mustard</label>
-        <select>
-          <option></option>
-          <option>Melissa</option>
-          <option>Aaron</option>
-          <option>Emma</option>
-          <option>Jake</option>
-        </select>
-      </li>
-      <li><input type="checkbox"><label>Scarlet</label>
-        <select>
-          <option></option>
-          <option>Melissa</option>
-          <option>Aaron</option>
-          <option>Emma</option>
-          <option>Jake</option>
-        </select>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Scarlet</label>
+      </div>
+      <div class="player">
+        <div id="button1" onClick="countMe(counter[1], 1)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Peacock</label>
+      </div>
+      <div class="player">
+        <div id="button2" onClick="countMe(counter[2], 2)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>White</label>
+      </div>
+      <div class="player">
+        <div id="button3" onClick="countMe(counter[3], 3)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Plum</label>
+      </div>
+      <div class="player">
+        <div id="button4" onClick="countMe(counter[4], 4)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Green</label>
+      </div>
+      <div class="player">
+        <div id="button5" onClick="countMe(counter[5], 5)">0</div>
+      </div>
+    </div>
 
+
+    <h4>WHAT</h4>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Dagger</label>
+      </div>
+      <div class="player">
+        <div id="button6" onClick="countMe(counter[6], 6)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Wrench</label>
+      </div>
+      <div class="player">
+        <div id="button7" onClick="countMe(counter[7], 7)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Rope</label>
+      </div>
+      <div class="player">
+        <div id="button8" onClick="countMe(counter[8], 8)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Candlestick</label>
+      </div>
+      <div class="player">
+        <div id="button9" onClick="countMe(counter[9], 9)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Pistol</label>
+      </div>
+      <div class="player">
+        <div id="button10" onClick="countMe(counter[10], 10)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Lead Pipe</label>
+      </div>
+      <div class="player">
+        <div id="button11" onClick="countMe(counter[11], 11)">0</div>
+      </div>
+    </div>
+
+    <h4>WHERE</h4>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Courtyard</label>
+      </div>
+      <div class="player">
+        <div id="button12" onClick="countMe(counter[12], 12)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Garage</label>
+      </div>
+      <div class="player">
+        <div id="button13" onClick="countMe(counter[13], 13)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Living Room</label>
+      </div>
+      <div class="player">
+        <div id="button14" onClick="countMe(counter[14], 14)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Game Room</label>
+      </div>
+      <div class="player">
+        <div id="button15" onClick="countMe(counter[15], 15)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Bedroom</label>
+      </div>
+      <div class="player">
+        <div id="button16" onClick="countMe(counter[16], 16)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Kitchen</label>
+      </div>
+      <div class="player">
+        <div id="button17" onClick="countMe(counter[17], 17)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Office</label>
+      </div>
+      <div class="player">
+        <div id="button18" onClick="countMe(counter[18], 18)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Bathroom</label>
+      </div>
+      <div class="player">
+        <div id="button19" onClick="countMe(counter[19], 19)">0</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Dining Room</label>
+      </div>
+      <div class="player">
+        <div id="button20" onClick="countMe(counter[20], 20)">0</div>
+      </div>
+    </div>
+    
   </body>
 </html>
