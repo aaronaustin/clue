@@ -14,8 +14,19 @@
         line-height: 30px;
       }
       h4 {
-        margin-bottom: 4px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         color: #999;
+      }
+      .container {
+        display:flex;
+        flex-wrap: wrap;
+      }
+      .group {
+        display: flex;
+        flex-direction: column;
+        min-width: 310px;
+        padding: 10px 15px;
       }
       .row {
         display: flex;
@@ -24,9 +35,10 @@
         border-bottom: 1px solid #eee;
         margin-bottom: 5px;
         padding-bottom: 5px;
+        justify-content: space-between;
       }
       .title {
-        flex-grow:2;
+        flex-grow:1;
       }
       .player {
         height:30px;
@@ -109,180 +121,184 @@
     </script>
   </head>
   <body>
-    <h4>WHO</h4>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Mustard</label>
+    <div class="container">
+      <div class="group">
+        <h4>WHO</h4>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Mustard</label>
+          </div>
+          <div class="player">
+            <div id="button0" onClick="countMe(counter[0], 0)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Scarlet</label>
+          </div>
+          <div class="player">
+            <div id="button1" onClick="countMe(counter[1], 1)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Peacock</label>
+          </div>
+          <div class="player">
+            <div id="button2" onClick="countMe(counter[2], 2)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>White</label>
+          </div>
+          <div class="player">
+            <div id="button3" onClick="countMe(counter[3], 3)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Plum</label>
+          </div>
+          <div class="player">
+            <div id="button4" onClick="countMe(counter[4], 4)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Green</label>
+          </div>
+          <div class="player">
+            <div id="button5" onClick="countMe(counter[5], 5)">0</div>
+          </div>
+        </div>
       </div>
-      <div class="player">
-        <div id="button0" onClick="countMe(counter[0], 0)">0</div>
+      <div class="group">
+        <h4>WHAT</h4>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Dagger</label>
+          </div>
+          <div class="player">
+            <div id="button6" onClick="countMe(counter[6], 6)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Wrench</label>
+          </div>
+          <div class="player">
+            <div id="button7" onClick="countMe(counter[7], 7)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Rope</label>
+          </div>
+          <div class="player">
+            <div id="button8" onClick="countMe(counter[8], 8)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Candlestick</label>
+          </div>
+          <div class="player">
+            <div id="button9" onClick="countMe(counter[9], 9)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Pistol</label>
+          </div>
+          <div class="player">
+            <div id="button10" onClick="countMe(counter[10], 10)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Lead Pipe</label>
+          </div>
+          <div class="player">
+            <div id="button11" onClick="countMe(counter[11], 11)">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <h4>WHERE</h4>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Courtyard</label>
+          </div>
+          <div class="player">
+            <div id="button12" onClick="countMe(counter[12], 12)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Garage</label>
+          </div>
+          <div class="player">
+            <div id="button13" onClick="countMe(counter[13], 13)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Living Room</label>
+          </div>
+          <div class="player">
+            <div id="button14" onClick="countMe(counter[14], 14)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Game Room</label>
+          </div>
+          <div class="player">
+            <div id="button15" onClick="countMe(counter[15], 15)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Bedroom</label>
+          </div>
+          <div class="player">
+            <div id="button16" onClick="countMe(counter[16], 16)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Kitchen</label>
+          </div>
+          <div class="player">
+            <div id="button17" onClick="countMe(counter[17], 17)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Office</label>
+          </div>
+          <div class="player">
+            <div id="button18" onClick="countMe(counter[18], 18)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Bathroom</label>
+          </div>
+          <div class="player">
+            <div id="button19" onClick="countMe(counter[19], 19)">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <input type="checkbox"><label>Dining Room</label>
+          </div>
+          <div class="player">
+            <div id="button20" onClick="countMe(counter[20], 20)">0</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Scarlet</label>
-      </div>
-      <div class="player">
-        <div id="button1" onClick="countMe(counter[1], 1)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Peacock</label>
-      </div>
-      <div class="player">
-        <div id="button2" onClick="countMe(counter[2], 2)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>White</label>
-      </div>
-      <div class="player">
-        <div id="button3" onClick="countMe(counter[3], 3)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Plum</label>
-      </div>
-      <div class="player">
-        <div id="button4" onClick="countMe(counter[4], 4)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Green</label>
-      </div>
-      <div class="player">
-        <div id="button5" onClick="countMe(counter[5], 5)">0</div>
-      </div>
-    </div>
-
-
-    <h4>WHAT</h4>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Dagger</label>
-      </div>
-      <div class="player">
-        <div id="button6" onClick="countMe(counter[6], 6)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Wrench</label>
-      </div>
-      <div class="player">
-        <div id="button7" onClick="countMe(counter[7], 7)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Rope</label>
-      </div>
-      <div class="player">
-        <div id="button8" onClick="countMe(counter[8], 8)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Candlestick</label>
-      </div>
-      <div class="player">
-        <div id="button9" onClick="countMe(counter[9], 9)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Pistol</label>
-      </div>
-      <div class="player">
-        <div id="button10" onClick="countMe(counter[10], 10)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Lead Pipe</label>
-      </div>
-      <div class="player">
-        <div id="button11" onClick="countMe(counter[11], 11)">0</div>
-      </div>
-    </div>
-
-    <h4>WHERE</h4>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Courtyard</label>
-      </div>
-      <div class="player">
-        <div id="button12" onClick="countMe(counter[12], 12)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Garage</label>
-      </div>
-      <div class="player">
-        <div id="button13" onClick="countMe(counter[13], 13)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Living Room</label>
-      </div>
-      <div class="player">
-        <div id="button14" onClick="countMe(counter[14], 14)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Game Room</label>
-      </div>
-      <div class="player">
-        <div id="button15" onClick="countMe(counter[15], 15)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Bedroom</label>
-      </div>
-      <div class="player">
-        <div id="button16" onClick="countMe(counter[16], 16)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Kitchen</label>
-      </div>
-      <div class="player">
-        <div id="button17" onClick="countMe(counter[17], 17)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Office</label>
-      </div>
-      <div class="player">
-        <div id="button18" onClick="countMe(counter[18], 18)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Bathroom</label>
-      </div>
-      <div class="player">
-        <div id="button19" onClick="countMe(counter[19], 19)">0</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="title">
-        <input type="checkbox"><label>Dining Room</label>
-      </div>
-      <div class="player">
-        <div id="button20" onClick="countMe(counter[20], 20)">0</div>
-      </div>
-    </div>
-    
   </body>
 </html>
