@@ -12,6 +12,14 @@
         font-size: 30px;
         line-height: 30px;
       }
+      .row {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+      .title {
+        flex-grow:2;
+      }
       ul {
         padding-left: 0;
         list-style-type: none;
@@ -53,7 +61,16 @@
     </style>
   </head>
   <body>
-    <h3>WHO</h3>
+    <h4>WHO</h4>
+    <div class="row">
+      <div class="title">
+        <input type="checkbox"><label>Mustard</label>
+      </div>
+      <div class="player">
+        <input type="number" name="quantity" min="0" max="5">
+      </div>
+
+    </div>
     <ul>
       <li><input type="checkbox"><label>Mustard</label>
         <select>
